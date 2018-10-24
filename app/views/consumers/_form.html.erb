@@ -1,0 +1,47 @@
+<%= form_with(model: consumer, local: true) do |form| %>
+  <% if consumer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(consumer.errors.count, "error") %> prohibited this consumer from being saved:</h2>
+
+      <ul>
+      <% consumer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :"Login Usuario" %>
+    <%= form.collection_select :user_id, User.all, :id, :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :consumer_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correo %>
+    <%= form.text_field :correo, id: :consumer_correo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono %>
+    <%= form.text_field :telefono, id: :consumer_telefono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clave %>
+    <%= form.text_field :clave, id: :consumer_clave %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_area :direccion, id: :consumer_direccion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

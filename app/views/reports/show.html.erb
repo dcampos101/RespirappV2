@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @report.user.email %>
+</p>
+
+<p>
+  <strong>Nivel de Contaminación:</strong>
+  <%= @report.contamination_level.nombre %>
+</p>
+
+<p>
+  <strong>Tipo de Reporte:</strong>
+  <%= @report.report_type.nombre %>
+</p>
+
+<p>
+  <strong>Ubicacion latitud:</strong>
+  <%= @report.ubicacion_lat %>
+</p>
+
+<p>
+  <strong>Ubicacion longitud:</strong>
+  <%= @report.ubicacion_long %>
+</p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= @report.imagen %>
+</p>
+
+<p>
+  <strong>Observación:</strong>
+  <%= @report.observacion %>
+</p>
+
+<%= link_to 'Editar', edit_report_path(@report) %> |
+<%= link_to 'Regresar', reports_path %>

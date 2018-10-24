@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @contamination_level.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @contamination_level.descripcion %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @contamination_level.estado %>
+</p>
+
+<%= link_to 'Edit', edit_contamination_level_path(@contamination_level) %> |
+<%= link_to 'Back', contamination_levels_path %>

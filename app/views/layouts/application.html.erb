@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Respirapp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+  <div id="login">
+  <% if user_signed_in? %>
+  Logeado como <strong><%= current_user.email %></strong>.
+  <%= link_to 'Modificar Perfil', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  <% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+
+      </div>
+      <h1 id="titulo">RespiraApp</h1>
+    </header>
+    <main id="principal">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
+      <div id="menuprincipal">
+        <ul class="btn-group-vertical">
+          <li type="button" class="btn btn-secondary"><%= link_to 'Datos Usuarios', consumers_path %></li>
+          <li type="button" class="btn btn-secondary"><%= link_to 'Niveles de Contaminacion', contamination_levels_path %></li>
+          <li type="button" class="btn btn-secondary"><%= link_to 'Tipos de Reporte', report_types_path %></li>
+          <li type="button" class="btn btn-secondary"><%= link_to 'Reportes', reports_path %></li>
+        </ul>
+      </div>
+      <div id="contenido">
+          <%= yield %>
+      </div>
+    </main>
+  </body>
+</html>

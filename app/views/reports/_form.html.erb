@@ -1,0 +1,53 @@
+<%= form_with(model: report, local: true) do |form| %>
+  <% if report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+      <% report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :"Usuario Sesión " %>
+    <strong><%=  current_user.email  %></strong>
+    
+  </div>
+
+  <div class="field">
+    <%= form.label :"Nivel de Contaminación" %>
+    <%= form.collection_select :contamination_level_id, ContaminationLevel.all, :id, :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"Tipo de Reporte" %>
+    <%= form.collection_select :report_type_id, ReportType.all, :id, :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ubicacion_lat %>
+    <%= form.text_field :ubicacion_lat, id: :report_ubicacion_lat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ubicacion_long %>
+    <%= form.text_field :ubicacion_long, id: :report_ubicacion_long %>
+  </div>
+
+  <div class="field">
+    <%= form.label :imagen %>
+    <%= form.text_area :imagen, id: :report_imagen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :observacion %>
+    <%= form.text_field :observacion, id: :report_observacion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

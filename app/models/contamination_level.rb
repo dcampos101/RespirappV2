@@ -1,0 +1,2 @@
+class ContaminationLevel < ApplicationRecord
+end

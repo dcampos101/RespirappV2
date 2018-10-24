@@ -1,0 +1,163 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import 'bootstrap';
+
+ 
+// Variables ===================================================================
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" !default;
+@import url($web-font-path);
+
+// Navbar ======================================================================
+
+// Buttons =====================================================================
+
+// Typography ==================================================================
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+$font-family-sans-serif: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif !default;
+
+$font-size-base: 0.9375rem !default;
+
+$headings-font-weight:   300 !default;
+
+ h1{
+  //font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  //font-size: 38px;
+ }
+ h3{
+  //font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  //font-size: 38px;
+ }
+ p{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+ }
+
+ a{
+color: rgba(13, 92, 88, 0.973);
+ }
+
+ 
+a:hover {
+
+  /*left: 42%;*/
+
+  color: rgb(50, 194, 14);
+  background: #2780E3;
+}
+
+a:visited {
+
+  /*left: 42%;*/
+
+  color: rgb(50, 194, 14);
+}
+
+ #login{
+  background: #2780E3; //!important
+  font-size: 10pt;
+  height: 50PX; //25
+  width: 100%;
+text-align: right;
+color: white;
+ }
+ 
+ #titulo{
+ background: #2780E3;
+color: white;
+margin: 0;
+border: 0;
+height: 100%;
+width: 100%;
+align-content: center;
+text-align: center;
+top: 25%;
+ }
+
+ #principal{
+background: white;
+margin: 2px;
+border: 2px;
+padding: 0;
+
+ }
+
+ #menuprincipal{
+background: lightgray;
+color: white;
+margin: 0px;
+padding: 0px;
+width: 29%;
+height: 85.4%;
+display: inline-table;
+box-sizing: border-box;
+position: absolute;
+//min-height: 10px;
+ }
+
+ #contenido{
+background: whitesmoke;
+margin: 1px;
+padding: 15px;
+width: 70%;
+
+height: 85.4%;
+left: 29.2%;
+display:inline-table;
+box-sizing: border-box; 
+//min-height: 10px;
+position: absolute;
+//top: 8.5%;
+ }
+ 
+ #menuprincipal ul li{
+font-size: 15pt;
+margin-bottom: 10px;
+margin-left: 10px;
+list-style: none;
+min-height: 10px;   
+box-sizing: border-box;
+height: 100%;
+
+ }
+ 
+ #menuprincipal a{
+  color: white;
+
+}
+
+#menuprincipal a:hover{
+   
+  text-decoration: none;
+  font-size: 16pt;
+  touch-action: pinch-zoom;
+  }
+
+
+
+
+/*
+Otra opcion para dejar el div en una parte especifica de la pantalla
+position:absolute;
+top: 12px;
+right: 33px;
+*/

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  contamination_level: one
+  report_type: one
+  ubicacion_lat: MyString
+  ubicacion_long: MyString
+  imagen: MyText
+  observacion: MyString
+
+two:
+  user: two
+  contamination_level: two
+  report_type: two
+  ubicacion_lat: MyString
+  ubicacion_long: MyString
+  imagen: MyText
+  observacion: MyString

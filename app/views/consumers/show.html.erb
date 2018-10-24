@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @consumer.usuario %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @consumer.nombre %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @consumer.correo %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @consumer.telefono %>
+</p>
+
+<p>
+  <strong>Clave:</strong>
+  <%= @consumer.clave %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @consumer.direccion %>
+</p>
+
+<%= link_to 'Editar', edit_consumer_path(@consumer) %> |
+<%= link_to 'Regresar', consumers_path %>
