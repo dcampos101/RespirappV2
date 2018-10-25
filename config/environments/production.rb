@@ -88,6 +88,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_mailer.default_url_option = { host:'heroku' }
+  config.action_mailer.default_url_option = { host:'https://limitless-refuge-57307.herokuapp.com/' }
   
 end
