@@ -13,8 +13,7 @@
 
   <div class="field">
     <%= form.label :"Usuario Sesión " %>
-    <strong><%=  current_user.email  %></strong>
-    
+    <%= form.collection_select :user_id, User.where(:id => current_user.id), :id, :email %>  
   </div>
 
   <div class="field">
